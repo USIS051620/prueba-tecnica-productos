@@ -86,8 +86,8 @@ export default function Home() {
 
       <main className="max-w-7xl mx-auto px-6 pt-12">
         <div className="mb-12">
-          <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-2">Catálogo Premium</h1>
-          <p className="text-slate-500 font-medium text-lg text-balance">Gestiona tu inventario con diseño de alta gama.</p>
+          <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-2">Catálogo de Productos</h1>
+          <p className="text-slate-500 font-medium text-lg text-balance">Gestiona tu inventario de productos con diseño de alta gama.</p>
         </div>
 
         {error && (

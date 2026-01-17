@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import axios from 'axios';
 import { Product, NewProduct } from './types';
 
-const API = 'https://productos-api-marvin.marvinjosuesolorzano178.workers.dev';
+const API = 'https://productos-api-marvin.marvinjosuesolorzano178.workers.dev/api/products';
 
 interface ProductStore {
     products: Product[];
