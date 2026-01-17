@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 LuxeEdit Frontend - Catálogo de Productos Premium
 
-## Getting Started
+Esta es la interfaz de usuario de la prueba técnica, desarrollada con un enfoque en **diseño minimalista, alta performance y experiencia de usuario fluida**.
 
-First, run the development server:
+## 🚀 Tecnologías Principales
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **[Next.js 15](https://nextjs.org/):** Utilizando el potente **App Router** para navegación y renderizado eficiente.
+- **[TypeScript](https://www.typescriptlang.org/):** Tipado estricto para un código robusto y libre de errores en producción.
+- **[Tailwind CSS](https://tailwindcss.com/):** Estilizado moderno y responsivo con una estética de alta gama.
+- **[Zustand](https://zustand-demo.pmnd.rs/):** Manejo de estado global ligero para una sincronización instantánea de los productos.
+- **[Lucide React](https://lucide.dev/):** Set de iconos vectoriales elegantes y consistentes.
+- **[Axios](https://axios-http.com/):** Cliente HTTP para comunicación fluida con la API.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Instalación y Configuración Local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Asegúrese de tener instalado [Bun](https://bun.sh/)**.
+2.  **Instale las dependencias:**
+    ```bash
+    bun install
+    ```
+3.  **Configuración de la API:**
+    Configuración para conectarse al backend en `http://localhost:3001` (o la URL de producción). Puede modificar esto en el archivo `src/app/store.ts`.
 
-## Learn More
+4.  **Inicie el servidor de desarrollo:**
+    ```bash
+    bun dev
+    ```
+5.  **Acceda a la aplicación:**
+    Abra [http://localhost:3000](http://localhost:3000) en su navegador.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Características Destacadas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📱 Diseño Totalmente Responsivo
+La interfaz ha sido diseñada con un enfoque "Mobile-First", garantizando una experiencia impecable en dispositivos móviles, tablets y monitores de escritorio de gran resolución.
 
-## Deploy on Vercel
+### ⚡ Gestión de Estado Reactiva
+Gracias a **Zustand**, las acciones de crear, editar y eliminar productos se reflejan instantáneamente en la interfaz sin necesidad de recargar la página, ofreciendo una sensación de aplicación nativa.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🎨 Estética Minimalista "Wow"
+- **Backdrop Blur:** Menús y modales con efectos de cristal esmerilado.
+- **Micro-interacciones:** Animaciones suaves al cargar y al interactuar con las tarjetas de productos.
+- **UX Optimizada:** Manejo claro de estados de carga (Loading) y mensajes de error descriptivos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📁 Estructura de Archivos
+
+- `/app`: Rutas y componentes principales.
+- `/app/page.tsx`: Vista principal de la tienda y lógica de modales.
+- `/app/store.ts`: Lógica de negocio y peticiones a la API (Zustand).
+- `/app/types.ts`: Definición de interfaces de TypeScript.
+- `/app/globals.css`: Configuraciones de Tailwind CSS y animaciones.
