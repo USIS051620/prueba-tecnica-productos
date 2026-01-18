@@ -91,7 +91,7 @@ Para cumplir con el requerimiento de entrega y despliegue profesional:
     ```bash
     git init
     git add .
-    git commit -m "Proyecto Completo: CRUD Fullstack con Diseño Premium"
+    git commit -m "Iniciailizacion del proyecto"
     git branch -M main
     git remote add origin https://github.com/USIS051620/prueba-tecnica-productos.git
     git push -u origin main
@@ -101,15 +101,21 @@ Para cumplir con el requerimiento de entrega y despliegue profesional:
     ```bash
     cd backend
     bunx wrangler login
-    bunx wrangler deploy src/index.ts --name productos-api
+    bunx wrangler secret put DATABASE_URL
+    Luego ponemos el enlace de la base de datos: postgresql://
+    bunx wrangle deploy
     ```
 
 3.  **Despliegue del Frontend (Vercel):**
     - Se conectó el repositorio de GitHub a la plataforma Vercel.
     - Se configuró el *Root Directory* como `/frontend`.
-    - Se desplegó automáticamente mediante la integración continua (CI/CD) de Vercel.
+    - Se desplegó automáticamente mediante la integración de Vercel.
 
 ---
+
+## Despliegue:
+- Front End: https://prueba-tecnica-productos.vercel.app/ 
+- Back End: https://productos-api-marvin.marvinjosuesolorzano178.workers.dev/api/products 
 
 ## 📊 Resumen de la Solución
 - **Stack:** Bun, Hono, Drizzle, Neon, Next.js 15, Tailwind CSS, Zustand.
