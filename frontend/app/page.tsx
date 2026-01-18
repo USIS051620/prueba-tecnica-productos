@@ -12,12 +12,10 @@ export default function Home() {
   const [search, setSearch] = useState('');
   const [mounted, setMounted] = useState(false);
 
-  // 1. Marcamos que el componente ya está en el navegador
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // 2. Cargamos productos solo cuando el componente esté listo
   useEffect(() => {
     if (mounted) {
       fetchProducts();

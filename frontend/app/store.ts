@@ -10,7 +10,7 @@ interface ProductStore {
     error: string | null;
     fetchProducts: (search?: string) => Promise<void>;
     addProduct: (product: NewProduct) => Promise<void>;
-    updateProduct: (id: string, product: NewProduct) => Promise<void>; // <--- Nueva función
+    updateProduct: (id: string, product: NewProduct) => Promise<void>;
     deleteProduct: (id: string) => Promise<void>;
 }
 
@@ -33,7 +33,7 @@ export const useProductStore = create<ProductStore>((set, get) => ({
             set({ products: [data, ...get().products] });
         } catch (err) { console.error(err); }
     },
-    updateProduct: async (id, updatedProd) => { // <--- Lógica para editar
+    updateProduct: async (id, updatedProd) => { 
         try {
             const { data } = await axios.put(`${API}/${id}`, updatedProd);
             set({
